@@ -1,0 +1,23 @@
+{
+  "name": "bb-8",
+  "version": "0.0.1",
+  "description": "Slack bot and API middleware for Jillian and I to use in our slack channel!11!1!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "author": "James Rothpearl",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.4",
+    "request": "^2.79.0"
+  }
+}
