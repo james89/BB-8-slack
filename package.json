@@ -1,7 +1,7 @@
 {
   "name": "bb-8",
   "version": "0.0.1",
-  "description": "Slack bot and API middleware for Jillian and I to use in our slack channel!11!1!",
+  "description": "Slack bot and API middleware for personal slack channel with Jillian",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
     "express": "^4.14.0",
     "mongoose": "^4.7.4",
     "request": "^2.79.0"

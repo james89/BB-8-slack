@@ -7,12 +7,17 @@ let routes = require('./routes/index');
 // initialize app
 let app = express();
 
+//config
+let dotenv = require('dotenv').config();
+// dotenv.load();
 
 // mongo
 let mongoose = require('mongoose');
+let db = require('./db/db').seedData();
+
 //other dependencies
-var request = require('request');
-var bodyParser = require('body-parser');
+let request = require('request');
+let bodyParser = require('body-parser');
 
 // // configuration
 app.set('port', process.env.PORT || 1337);
@@ -37,12 +42,12 @@ app.use(function (err, req, res, next) {
 });
 
 
-/* TO DO
-https://github.com/jstorts/slacklist-tutorial/blob/master/slacklist.js
-separate tasks (handler methods) into tasks/tasks.js, and in routes file you can import and use those methods (refer to strucutre inside link)
-
-
-*/
-
 // initialize routes
 app.use('/', routes)
+
+
+// DB setup
+
+let mongodbUri = process.env.MONGODB_URL;
+console.log('mongodbUri: ' + mongodbUri)
+mongoose.connect(mongodbUri);
